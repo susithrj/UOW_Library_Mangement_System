@@ -1,0 +1,27 @@
+table {
+  margin-right: auto;
+  margin-left: auto;
+  width: 65%;
+  background-color: rgb(211, 207, 207);
+
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: rgb(160, 151, 144)}
+th {
+  background-color: rgb(2, 2, 1);
+  color: white;
+  text-align: center;
+}
+#viewReader{
+
+  padding-top: 50px;
+  background-image: url("wallp.jpg");
+  padding-bottom: 35%;
+
+}

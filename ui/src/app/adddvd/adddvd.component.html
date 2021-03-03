@@ -1,0 +1,53 @@
+<div id="additem">
+  <div id="space">
+    <label>Available Spaces - {{50 - slots}}</label>
+  </div>
+  <form [formGroup] = "DVDForm" (ngSubmit) = "onFormSubmit()">
+
+
+    <div class="container">
+      <label><b>*Title</b></label>
+      <input type="text" placeholder="Enter title"  formControlName = "title">
+      <span
+        *ngIf = "!DVDForm.get('title').valid && DVDForm.get('title').touched" class="help-block">
+         Please Insert Title
+         </span><br>
+      <label><b>Issue date</b></label>
+      <input type="date" placeholder="Enter date" formControlName = "date">
+      <label><b>*ISBN</b></label>
+      <input type="number" min="1" placeholder="Enter ISBN" formControlName = "isbn">
+      <span
+        *ngIf = "!DVDForm.get('isbn').valid && DVDForm.get('isbn').touched" class="help-block">
+         Please Insert ISBN
+         </span><br>
+      <label><b>*Producer</b></label>
+      <input type="text" placeholder="Enter producer"  formControlName = "producer">
+      <span
+        *ngIf = "!DVDForm.get('producer').valid && DVDForm.get('producer').touched" class="help-block">
+         Please Insert Producer
+         </span><br>
+      <label><b>*Sector</b></label>
+      <input type="text" placeholder="Enter producer"  formControlName = "sector">
+      <span
+        *ngIf = "!DVDForm.get('sector').valid && DVDForm.get('sector').touched" class="help-block">
+         Please Insert Sector
+         </span><br>
+      <label><b>*Duration</b></label>
+      <input type="number" min="1" placeholder="Enter duration"  formControlName = "duration">
+      <span
+        *ngIf = "!DVDForm.get('duration').valid && DVDForm.get('duration').touched" class="help-block">
+         Please Insert Duration
+         </span><br>
+      <label><b>Actors</b></label>
+      <input type="text"  placeholder="Enter actors"  formControlName = "actors">
+      <label><b>Languages</b></label>
+      <input type="text"  placeholder="Enter languages"  formControlName = "languages">
+      <label><b>Subtitles</b></label>
+      <input type="text"  placeholder="Enter subtitles"  formControlName = "subtitles">
+      <button [disabled] = "!DVDForm.valid">ADD</button>
+    </div>
+
+
+  </form>
+
+</div>

@@ -1,0 +1,33 @@
+<div id="lenditem" >
+
+  <form [formGroup] = "lendItemForm" (ngSubmit) = "onFormSubmit()">
+
+
+    <div class="container">
+
+      <div class="container">
+
+        <label><b>*ISBN</b></label>
+        <input type="number" min="1" placeholder="Enter ISBN" formControlName = "isbn" >
+        <span
+          *ngIf = "!lendItemForm.get('isbn').valid && lendItemForm.get('isbn').touched" class="help-block">
+         Please Insert ISBN
+         </span><br>
+        <label><b>*Reader ID</b></label>
+        <input type="number" min="1" placeholder="Enter Reader ID" formControlName = "readerId">
+        <span
+          *ngIf = "!lendItemForm.get('readerId').valid && lendItemForm.get('readerId').touched" class="help-block">
+         Please Insert Reader ID
+         </span><br>
+        <label><b>*Date</b></label>
+        <input type="datetime-local" placeholder="Enter date" formControlName = "date">
+
+        <button type="submit" [disabled] = "!lendItemForm.valid">OK</button>
+
+      </div>
+
+    </div>
+
+
+  </form>
+</div>

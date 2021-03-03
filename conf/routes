@@ -1,0 +1,54 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Serve index page from public directory
+GET     /                           controllers.FrontendController.index()
+
+# An example route (Prefix all API routes with apiPrefix defined in application.conf)
+#GET     /api/summary                controllers.HomeController.appSummary
+
+# Serve static assets under public directory
+GET     /*file                      controllers.FrontendController.assetOrDefault(file)
+
+# Test post request
+
++nocsrf
+POST    /api/bookSubmit               controllers.HomeController.getBookFormData()
+
++nocsrf
+POST    /api/dvdSubmit               controllers.HomeController.getDvdFormData()
+
++nocsrf
+POST    /api/getBookData           controllers.HomeController.sendTableContent()
+
++nocsrf
+POST    /api/lendItem           controllers.HomeController.lendItem()
+
++nocsrf
+POST        /api/deleteItem        controllers.HomeController.deleteItem()
+
++nocsrf
+POST    /api/returnItem           controllers.HomeController.returnItem()
+
++nocsrf
+POST    /api/search          controllers.HomeController.searchTitle()
+
+
++nocsrf
+POST    /api/getSlots          controllers.HomeController.calculateFreeSpaces()
+
++nocsrf
+POST    /api/getReport         controllers.HomeController.generateReport()
+
++nocsrf
+POST    /api/addReader         controllers.HomeController.getReaderFormData()
+
++nocsrf
+POST    /api/viewReaders         controllers.HomeController.sendReaderTable()
+
++nocsrf
+POST    /api/resItem        controllers.HomeController.reserveItem()
+
++nocsrf
+POST    /api/viewReservations       controllers.HomeController.sendReservationTable()

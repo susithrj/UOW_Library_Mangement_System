@@ -1,0 +1,63 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 2px solid black;width:500px;margin-left: auto;margin-right: auto;background-color: white;}
+
+input[type=text], input[type=password],input[type=number],input[type=datetime-local] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: rgb(85, 107, 233);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+.container {
+  padding: 16px;
+
+}
+
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+#returnitem{
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 120px;
+  padding-bottom: 10%;
+  background-image: url("wallp.jpg");
+}
+button:disabled{
+  cursor: not-allowed;
+}
+input.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+#fine{
+  border: 2px solid black;
+  width: 25%;
+  font-size: larger;
+  background-color: #cccccc;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}

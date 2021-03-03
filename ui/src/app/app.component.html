@@ -1,0 +1,32 @@
+<h2>WESTMINSTER LIBRARY MANAGER</h2>
+
+<div class="navbar">
+  <a routerLink="/addReader">Add New Reader</a>
+  <div class="dropdown">
+    <button class="dropbtn">Add New Item
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a routerLink="/addbook">Book Entry</a>
+      <a routerLink="/adddvd">DVD Entry</a>
+    </div>
+  </div>
+  <a routerLink="/deleteitem">Delete Item</a>
+  <a routerLink="/veiwlist">View Items</a>
+  <a routerLink="/lenditem">Lend Item</a>
+  <a routerLink="/returnitem">Return Item</a>
+  <a routerLink="/report">Generate Report</a>
+  <a routerLink="/makeRes">Reserve Item</a>
+  <a routerLink="/veiwReader">View Readers</a>
+  <a routerLink="/veiwRes">View Reservations</a>
+
+</div>
+
+
+<router-outlet></router-outlet>
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+<div id="viewRes">
+
+
+  <table>
+    <thead>
+    <tr>
+
+
+      <th>Reader ID</th>
+      <th>ISBN</th>
+      <th>Collection Date</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor ="let tableContent of resData;">
+
+      <td>{{tableContent.resReader.readerId}}</td>
+      <td>{{tableContent.item_isbn}}</td>
+      <td>{{tableContent.collectionDate.sqlDate}}</td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>

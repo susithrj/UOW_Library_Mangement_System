@@ -1,0 +1,28 @@
+<div id="viewReader">
+
+
+  <table>
+    <thead>
+    <tr>
+
+
+      <th>Reader ID</th>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor ="let tableContent of readerData;">
+
+      <td>{{tableContent.readerId}}</td>
+      <td>{{tableContent.name}}</td>
+      <td>{{tableContent.email}}</td>
+      <td>{{tableContent.mobileNumber}}</td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>

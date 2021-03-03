@@ -1,0 +1,52 @@
+<div id="additem" >
+  <div id="space">
+    <label>Available Spaces - {{100 - slots}}</label>
+  </div>
+
+  <form [formGroup] = "addBookForm" (ngSubmit) = "onFormSubmit()">
+
+
+    <div class="container">
+      <label><b>*Title</b></label>
+      <input type="text" placeholder="Enter title" formControlName = "title">
+      <span
+        *ngIf = "!addBookForm.get('title').valid && addBookForm.get('title').touched" class="help-block">
+         Please Insert Title
+         </span><br>
+      <label><b>*Sector</b></label>
+      <input type="text" placeholder="Enter Sector" formControlName = "sector">
+      <span
+        *ngIf = "!addBookForm.get('sector').valid && addBookForm.get('sector').touched" class="help-block">
+         Please Insert Sector
+         </span><br>
+      <label><b>Issue date</b></label>
+
+      <input type="date"  formControlName = "date">
+
+      <label><b>*ISBN</b></label>
+      <input type="number" min="1" placeholder="Enter ISBN" formControlName = "isbn">
+      <span
+        *ngIf = "!addBookForm.get('isbn').valid && addBookForm.get('isbn').touched" class="help-block">
+         Please Insert ISBN
+         </span><br>
+      <label><b>*Total Pages</b></label>
+      <input type="number" min="1" placeholder="Enter Total Pages" formControlName = "pages">
+      <span
+        *ngIf = "!addBookForm.get('pages').valid && addBookForm.get('pages').touched" class="help-block">
+         Please Insert Total pages
+         </span><br>
+      <label><b>*Authors</b></label>
+      <input type="text" placeholder="Enter Authors" formControlName = "authors">
+      <span
+        *ngIf = "!addBookForm.get('authors').valid && addBookForm.get('authors').touched" class="help-block">
+         Please Insert Author/Authors
+         </span><br>
+      <button [disabled] = "!addBookForm.valid">ADD</button>
+
+    </div>
+
+
+  </form>
+</div>
+
+

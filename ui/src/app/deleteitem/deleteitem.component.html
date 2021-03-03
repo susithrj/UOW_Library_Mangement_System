@@ -1,0 +1,27 @@
+<div id="deleitem" >
+  <div id="space">
+    <label>Available </label>
+    <label id ="dvd">DVD Slots - {{50 - dvdSlots}}</label>
+    <label id ="book">BOOK Slots - {{100 - bookSlots}}</label>
+
+  </div>
+  <h3 style="text-align:center">Please Enter ISBN to Delete Item</h3>
+
+  <form [formGroup] = "deleteItemForm" (ngSubmit) = "onFormSubmit()">
+
+
+    <div class="container">
+
+      <label><b>*Item ISBN</b></label>
+      <input type="number" min="1" placeholder="Enter ISBN"  formControlName = "isbn">
+      <span
+        *ngIf = "!deleteItemForm.get('isbn').valid && deleteItemForm.get('isbn').touched" class="help-block">
+         Please Insert ISBN
+         </span><br>
+      <button type="submit" [disabled] = "!deleteItemForm.valid">Delete</button>
+
+    </div>
+
+
+  </form>
+</div>

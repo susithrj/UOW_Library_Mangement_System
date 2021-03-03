@@ -1,0 +1,27 @@
+<div id="report">
+
+
+  <table>
+    <thead>
+    <tr>
+
+      <th>ISBN</th>
+      <th>Reader ID</th>
+      <th>Expected Date</th>
+      <th>Fee</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor ="let tableContent of reportData;">
+
+      <td>{{tableContent.item_isbn}}</td>
+      <td>{{tableContent.reader.readerId}}</td>
+      <td>{{tableContent.returnDate.sqlDate}}</td>
+      <td>{{tableContent.fineFee}}</td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>

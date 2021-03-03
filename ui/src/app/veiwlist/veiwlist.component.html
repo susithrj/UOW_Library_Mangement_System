@@ -1,0 +1,38 @@
+<div id="viewitem">
+<div id = "search">
+  <form [formGroup] = "searchForm" (ngSubmit) = "onFormSubmit()">
+
+    <div class="container">
+      <input type="text" placeholder="Search by Title"  formControlName = "title">
+      <button type="submit" [disabled] = "!searchForm.valid">Search</button>
+      <button type="reset" (click)="getData()">See All</button>
+    </div>
+
+  </form>
+
+</div>
+
+<table>
+  <thead>
+  <tr>
+    <th>TYPE</th>
+    <th>ISBN</th>
+    <th>TITLE</th>
+    <th>SECTOR</th>
+    <th>Availability</th>
+
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor ="let content of bookData;">
+    <td><div *ngIf = "content.duration === 0">DVD</div><div *ngIf = "content.duration != 0">BOOK</div></td>
+    <td>{{content.isbn}}</td>
+    <td>{{content.title}}</td>
+    <td>{{content.sector}}</td>
+    <td><div id="no"  *ngIf = "content.presentReader.readerId != 0">No</div>
+      <div id="yes"  *ngIf = "content.presentReader.readerId  === 0">Yes</div></td>
+  </tr>
+  </tbody>
+</table>
+</div>

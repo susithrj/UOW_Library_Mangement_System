@@ -1,0 +1,32 @@
+<div id="addreader" >
+  <form [formGroup] = "readerForm" (ngSubmit) = "onFormSubmit()">
+
+
+    <div class="container">
+      <label><b>*Name</b></label>
+      <input type="text" placeholder="Enter Name" formControlName = "name">
+      <span
+        *ngIf = "!readerForm.get('name').valid && readerForm.get('name').touched" class="help-block">
+         Please Insert Name
+         </span><br>
+      <label><b>*Email</b></label>
+      <input type="text" placeholder="Enter Email" formControlName = "email">
+      <span
+        *ngIf = "!readerForm.get('email').valid && readerForm.get('email').touched" class="help-block">
+         Please Insert Email
+         </span><br>
+      <label><b>*Phone Number</b></label>
+      <input type="number" min="0" placeholder="Enter Phone Number" formControlName = "number">
+      <span
+        *ngIf = "!readerForm.get('number').valid && readerForm.get('number').touched" class="help-block">
+         Please Insert Phone Number
+         </span><br>
+      <button [disabled] = "!readerForm.valid">ADD Reader</button>
+
+    </div>
+
+
+  </form>
+</div>
+
+

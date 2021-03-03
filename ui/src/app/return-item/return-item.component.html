@@ -1,0 +1,41 @@
+<div id="returnitem" >
+
+
+    <form [formGroup] = "returnItemForm" (ngSubmit) = "onFormSubmit()">
+
+
+      <div class="container">
+
+        <label><b>*ISBN</b></label>
+        <input type="number" min="1" placeholder="Enter ISBN" formControlName = "isbn" >
+        <span
+          *ngIf = "!returnItemForm.get('isbn').valid && returnItemForm.get('isbn').touched" class="help-block">
+         Please Insert ISBN
+         </span><br>
+        <label><b>*Reader ID</b></label>
+        <input type="number" min="1" placeholder="Enter Reader ID" formControlName = "readerId">
+        <span
+          *ngIf = "!returnItemForm.get('readerId').valid && returnItemForm.get('readerId').touched" class="help-block">
+         Please Insert Reader ID
+         </span><br>
+        <label><b>*Date</b></label>
+        <input type="datetime-local" placeholder="Enter date" formControlName = "date">
+
+        <button type="submit" [disabled] = "!returnItemForm.valid">Return</button>
+
+      </div>
+
+    </form>
+  <div id = fine>
+    <table >
+      <tr>
+         <th>Due Date |</th>
+         <td>{{dueDate}}</td>
+      </tr>
+      <tr>
+        <th style="text-align: left">Fine Fee |</th>
+        <td>{{fee}}</td>
+      </tr>
+    </table></div>
+
+</div>

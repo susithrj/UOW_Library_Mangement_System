@@ -1,0 +1,38 @@
+<div id="lenditem" >
+
+  <form [formGroup] = "reserveForm" (ngSubmit) = "onFormSubmit()">
+
+
+    <div class="container">
+
+      <div class="container">
+
+        <label><b>*ISBN</b></label>
+        <input type="number" min="1" placeholder="Enter ISBN" formControlName = "isbn" >
+        <span
+          *ngIf = "!reserveForm.get('isbn').valid && reserveForm.get('isbn').touched" class="help-block">
+         Please Insert ISBN
+         </span><br>
+        <label><b>*Reader ID</b></label>
+        <input type="number" min="1" placeholder="Enter Reader ID" formControlName = "readerId">
+        <span
+          *ngIf = "!reserveForm.get('readerId').valid && reserveForm.get('readerId').touched" class="help-block">
+         Please Insert Reader ID
+         </span><br>
+
+        <button type="submit" [disabled] = "!reserveForm.valid">Reserve</button>
+
+      </div>
+
+    </div>
+
+
+  </form>
+  <div id = collection>
+    <table >
+      <tr>
+        <th>Collection Date |</th>
+        <td>{{collectionDate}}</td>
+      </tr>
+    </table></div>
+</div>
