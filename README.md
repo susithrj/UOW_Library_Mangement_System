@@ -9,4 +9,7 @@ Library Management System is also known as an integrated library system that man
 
 Features of the Digital Library Management System are: Easy way to enter book data. Full catalogue, circulation, and acquisition system for library stock management. Web-based OPAC (Online Public Access Catalogue) system. Simple, clear search interface for all users. Multilingual and multi-user support. Export and import records. A modern integrated library management system. Print your own barcodes.
 
+![image](https://github.com/susithrj/DigiLib-OnlineLibraryManagementPlatform/assets/47299475/ece9326d-39dd-430c-94aa-70d682b6267d)
+
+
 [More about DigiLib](https://garnet-cardamom-4d4.notion.site/DigiLib-203482b37ebf44b2b1cefc4cafd68aea?pvs=4)
