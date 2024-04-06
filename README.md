@@ -1,11 +1,3 @@
-## Digital-Library-Manger-java
-
-Digital library management system designed for University of westminster.
-
-[More about DigiLib](https://garnet-cardamom-4d4.notion.site/DigiLib-203482b37ebf44b2b1cefc4cafd68aea?pvs=4)
-
-# DigiLib
-
 # DigiLib: Online Library Management Platform
 
 Web
@@ -15,3 +7,5 @@ Library Management System is also known as an integrated library system that man
 !https://prod-files-secure.s3.us-west-2.amazonaws.com/3947affc-9d44-426c-8379-570927154d6c/41800e87-ffe1-42b9-b603-d9444d9e7d03/image1.png
 
 Features of the Digital Library Management System are: Easy way to enter book data. Full catalogue, circulation, and acquisition system for library stock management. Web-based OPAC (Online Public Access Catalogue) system. Simple, clear search interface for all users. Multilingual and multi-user support. Export and import records. A modern integrated library management system. Print your own barcodes.
+
+[More about DigiLib](https://garnet-cardamom-4d4.notion.site/DigiLib-203482b37ebf44b2b1cefc4cafd68aea?pvs=4)
